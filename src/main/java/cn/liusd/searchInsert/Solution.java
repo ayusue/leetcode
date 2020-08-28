@@ -37,8 +37,8 @@ import com.sun.xml.internal.bind.v2.util.StackRecorder;
 class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = new int[]{1,3,5,6};
-        int target = 5;
+        int[] nums = new int[]{1,3,5,6,9};
+        int target = 1;
         System.out.println(solution.searchInsert(nums,target));
     }
 
@@ -49,7 +49,7 @@ class Solution {
 
         if(target > nums[end - 1]){
             return end;
-        }else if(target < nums[0]) {
+        }else if(target <= nums[0]) {
             return 0;
         }
         while(end - begin > 1){
